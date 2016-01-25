@@ -1,4 +1,4 @@
-FROM mikelh/debian-s6
+FROM mikelh/docker-debian-s6
 MAINTAINER mikelh <mhasselberg@web.de>
 
 # add configs
