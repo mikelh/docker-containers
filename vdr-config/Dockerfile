@@ -1,5 +1,5 @@
-FROM chriszero/ubuntu-s6-base
-MAINTAINER chriszero <zerov83@gmail.com>
+FROM mikelh/docker-debian-s6
+MAINTAINER mikelh <mhasselberg@web.de>
 
 # add configs
 ADD var/lib/vdr/* /var/lib/vdr/
