@@ -1,7 +1,7 @@
 FROM chriszero/ubuntu-s6-base
 MAINTAINER chriszero <zerov83@gmail.com>
 
-WORKDIR /tmp
+#WORKDIR /tmp
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 272A2CE18103B360 F529E113D0A5897C \
  && echo deb http://ppa.launchpad.net/yavdr/main/ubuntu trusty main   > /etc/apt/sources.list.d/yavdr.list \
