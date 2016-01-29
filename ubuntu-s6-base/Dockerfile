@@ -1,5 +1,5 @@
 FROM ubuntu-debootstrap:14.04
-MAINTAINER chriszero <zerov83@gmail.com>
+MAINTAINER mikelh <mhasselberg@web.de>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV _clean="rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*"
