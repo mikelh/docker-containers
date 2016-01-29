@@ -19,8 +19,10 @@ RUN apt-get update -qq && \
 	vdr-plugin-satip \
 	vdr-plugin-live \
 	vdr-plugin-restfulapi \
-	vdr-plugin-dvbapi \
+#	vdr-plugin-dvbapi \
 	vdr-plugin-vnsiserver \
+	vdr-plugin-xvdr \
+	vdr-plugin-lcdproc \
 	vdr-plugin-vdrmanager \
 	vdr-plugin-remotetimers \
 	vdr-plugin-svdrpservice \
