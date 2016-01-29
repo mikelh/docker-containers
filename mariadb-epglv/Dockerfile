@@ -7,7 +7,7 @@ RUN echo "Europe/Berlin" > /etc/timezone && \
 RUN mkdir -p /tmp/epglv/src
 ADD epglv/* /tmp/epglv/
 ADD epglv/src/* /tmp/epglv/src/
-ADD setup_epglv.sh /tmp/
+ADD setup_epglv.sh /tmp/ && chmod 755 /tmp/setup_epglv.sh
 RUN /tmp/setup_epglv.sh
 
 ENV LANG de_DE.UTF-8  
