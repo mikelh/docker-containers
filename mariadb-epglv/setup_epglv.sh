@@ -20,5 +20,5 @@ apt-get remove -qy \
 	libmariadbclient-dev zlib1g-dev
 
 
-apt-get autoremove -qy && apt-get clean && apt-get purge && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+apt-get autoremove -qy && apt-get clean
 
