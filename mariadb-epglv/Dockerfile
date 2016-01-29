@@ -9,7 +9,8 @@ ADD epglv/* /tmp/epglv/
 ADD epglv/src/* /tmp/epglv/src/
 ADD setup_epglv.sh /tmp/ 
 RUN chmod 755 /tmp/setup_epglv.sh
-RUN /tmp/setup_epglv.sh
+RUN /tmp/setup_epglv.sh 
+RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV LANG de_DE.UTF-8  
 ENV LANGUAGE de_DE:de  
