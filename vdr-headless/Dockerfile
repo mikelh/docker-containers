@@ -23,7 +23,8 @@ RUN apt-get update -qq && \
 	vdr-plugin-vnsiserver \
 	vdr-plugin-xvdr \
 	vdr-plugin-lcdproc \
-	vdr-plugin-vdrmanager \
+	vdr-plugin-remote \
+#	vdr-plugin-vdrmanager \
 	vdr-plugin-remotetimers \
 	vdr-plugin-svdrpservice \
 	vdr-plugin-streamdev-server \
