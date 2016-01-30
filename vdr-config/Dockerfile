@@ -1,5 +1,4 @@
-#FROM mikelh/docker-debian-s6
-FROM scratch
+FROM mikelh/hello-world
 MAINTAINER mikelh <mhasselberg@web.de>
 
 # add configs
