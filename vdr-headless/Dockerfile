@@ -15,7 +15,7 @@ RUN apt-get update -qq && \
 	vdr \
 	rsyslog \
 	vdr-plugin-epgsearch \
-	vdr-plugin-femon \
+#	vdr-plugin-femon \
 	vdr-plugin-satip \
 	vdr-plugin-live \
 	vdr-plugin-restfulapi \
@@ -23,7 +23,7 @@ RUN apt-get update -qq && \
 	vdr-plugin-vnsiserver \
 	vdr-plugin-xvdr \
 	vdr-plugin-lcdproc \
-	vdr-plugin-remote \
+#	vdr-plugin-remote \
 #	vdr-plugin-vdrmanager \
 	vdr-plugin-remotetimers \
 	vdr-plugin-svdrpservice \
