@@ -1,4 +1,4 @@
-FROM mikelh/hello-world
+FROM chriszero/ubuntu-s6-base
 MAINTAINER mikelh <mhasselberg@web.de>
 
 # add configs
@@ -8,4 +8,4 @@ ADD etc/vdr/conf.d/* /etc/vdr/conf.d/
 
 VOLUME /etc/vdr /var/lib/vdr
 
-#ENTRYPOINT ["/bin/echo","config volumes for your vdr image"]
+ENTRYPOINT ["/bin/echo","config volumes for your vdr image"]
