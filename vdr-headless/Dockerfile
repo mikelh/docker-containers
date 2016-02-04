@@ -22,6 +22,7 @@ RUN apt-get update -qq && \
 #	vdr-plugin-dvbapi \
 	vdr-plugin-vnsiserver \
 	vdr-plugin-xvdr \
+	vdr-plugin-wirbelscan \
 	vdr-plugin-lcdproc \
 #	vdr-plugin-remote \
 #	vdr-plugin-vdrmanager \
