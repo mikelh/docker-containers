@@ -14,7 +14,8 @@ export LANG="de_DE.UTF-8"
 [ "$(stat -c %u:%g /var/lib/vdr)" = "0:0" ] && chown vdr:vdr /var/lib/vdr
 
 # Run vdr
-exec s6-setuidgid vdr vdr
+# exec s6-setuidgid vdr vdr
 # vdr needs to start as root when using setpriority
 # vdr will switch itself to assigned user then
-# exec vdr --user=vdr
+# this must be done by giving the option --user vdr in the [vdr] section in config file
+exec vdr
