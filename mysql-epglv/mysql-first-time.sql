@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 CREATE DATABASE IF NOT EXISTS epg2vdr charset utf8;
+=======
+DROP DATABASE IF EXISTS epg2vdr;
+CREATE DATABASE epg2vdr charset utf8;
+>>>>>>> 10b643b488a315256ed3080d9c87f793c63e0c2c
 
 GRANT ALL PRIVILEGES ON epg2vdr.* TO 'epg2vdr'@'%' IDENTIFIED BY 'epg';
 GRANT ALL PRIVILEGES ON epg2vdr.* TO 'epg2vdr'@'localhost' IDENTIFIED BY 'epg';
