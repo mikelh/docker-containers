@@ -74,7 +74,7 @@ RUN groupmod -o -g 666 vdr \
  && usermod -o -u 666 vdr \
  && install -o vdr -g vdr -d /recordings /var/cache/vdr /var/lib/vdr
 
-EXPOSE 2004 3000 6419 8002 8008 4010-4020/udp 34890
+EXPOSE 2004 3000 6419 8002 8008 4010-4020/udp 34890 34891
 VOLUME /recordings /etc/vdr /var/lib/vdr
 
 ENTRYPOINT ["/init"]
