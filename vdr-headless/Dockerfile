@@ -21,7 +21,7 @@ RUN apt-get update -qq && \
 	vdr-plugin-restfulapi \
 #	vdr-plugin-dvbapi \
 	vdr-plugin-vnsiserver \
-	vdr-plugin-xvdr \
+#	vdr-plugin-xvdr \
 	vdr-plugin-wirbelscan \
 	vdr-plugin-lcdproc \
 #	vdr-plugin-remote \
@@ -29,7 +29,8 @@ RUN apt-get update -qq && \
 	vdr-plugin-remotetimers \
 	vdr-plugin-svdrpservice \
 	vdr-plugin-streamdev-server \
-	libmariadbclient18 uuid \
+#	libmariadbclient18 \
+	uuid \
 	nano && \
 	apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -55,18 +56,18 @@ RUN apt-get update -qq && \
 	apt-get autoremove -qy $(apt-cache showsrc vdr-plugin-satip | sed -e '/Build-Depends/!d;s/Build-Depends: \|,\|([^)]*),*\|\[[^]]*\]//g') && \ 
 	apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ADD vdr-plugin-epg2vdr_0.1.12.git20151112.0816-0yavdr2~trustyubuntu1_amd64.deb .
-RUN dpkg -i vdr-plugin-epg2vdr*
+#ADD vdr-plugin-epg2vdr_0.1.12.git20151112.0816-0yavdr2~trustyubuntu1_amd64.deb .
+#RUN dpkg -i vdr-plugin-epg2vdr*
 
 ADD vdr.sh /etc/services.d/vdr/run
 ADD vdr-finish.sh /etc/services.d/vdr/finish
 ADD rsyslog.sh /etc/services.d/rsyslog/run
 
 # add configs
-ADD var/lib/vdr/* /var/lib/vdr/
-ADD var/lib/vdr/plugins/streamdev-server/* /var/lib/vdr/plugins/streamdev-server/
-RUN rm /etc/vdr/conf.d/*
-ADD etc/vdr/conf.d/* /etc/vdr/conf.d/
+#ADD var/lib/vdr/* /var/lib/vdr/
+#ADD var/lib/vdr/plugins/streamdev-server/* /var/lib/vdr/plugins/streamdev-server/
+#RUN rm /etc/vdr/conf.d/*
+#ADD etc/vdr/conf.d/* /etc/vdr/conf.d/
 ADD etc/rsyslog.conf /etc/
 
 # Configure the vdr user account and it's folders
@@ -74,7 +75,8 @@ RUN groupmod -o -g 666 vdr \
  && usermod -o -u 666 vdr \
  && install -o vdr -g vdr -d /recordings /var/cache/vdr /var/lib/vdr
 
-EXPOSE 2004 3000 6419 8002 8008 4010-4020/udp 34890 34891
+#EXPOSE 2004 3000 6419 8002 8008 4010-4020/udp 34890 34891
+EXPOSE 2004 3000 6419 8002 8008 4010-4020/udp 34890
 VOLUME /recordings /etc/vdr /var/lib/vdr
 
 ENTRYPOINT ["/init"]
