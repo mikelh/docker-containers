@@ -42,7 +42,7 @@ RUN apt-get update -qq && \
 	apt-get install -qy build-essential && \
 	apt-get build-dep -qy \
 	vdr-plugin-satip && \
-	wget https://github.com/rofafor/vdr-plugin-satip/archive/vdr-2.2.x.tar.gz .
+	wget https://github.com/rofafor/vdr-plugin-satip/archive/vdr-2.2.x.tar.gz . && \
 	tar xzf vdr-2.2.x.tar.gz && \
 	cd vdr-plugin-satip* && \
 	make && make install && \
