@@ -12,6 +12,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 272A2CE181
 
 RUN apt-get update -qq && \
 	apt-get install -qy \
+	wget \
 	vdr \
 	rsyslog \
 	vdr-plugin-epgsearch \
@@ -29,6 +30,7 @@ RUN apt-get update -qq && \
 	vdr-plugin-remotetimers \
 	vdr-plugin-svdrpservice \
 	vdr-plugin-streamdev-server \
+#	vdr-plugin-svdrposd \
 #	libmariadbclient18 \
 	uuid \
 	nano && \
