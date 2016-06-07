@@ -14,7 +14,7 @@ export LANG="de_DE.UTF-8"
 [ "$(stat -c %u:%g /var/lib/vdr)" = "0:0" ] && chown vdr:vdr /var/lib/vdr
 
 # We need to preseed the volumes, just copy new files, no overwrite
-cp -a -v --no-clobber /var/lib/vdr/* /vdr/config
+#cp -a -v --no-clobber /var/lib/vdr/* /vdr/config
 # cp -a /var/lib/vdr/plugins/epg2vdr/epg.dat /vdr/config/plugins/epg2vdr
 
 # Run vdr
