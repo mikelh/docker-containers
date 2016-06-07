@@ -34,7 +34,7 @@ RUN apt-get update -qq && \
 	nano && \
 	apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ADD https://github.com/chriszero/vdr-plugin-satip/archive/vdr-2.2.x.tar.gz .
+ADD wget https://github.com/rofafor/vdr-plugin-satip/archive/vdr-2.2.x.tar.gz .
 #COPY vdr-satip-2.2.3.tgz .
 RUN echo deb-src http://ppa.launchpad.net/yavdr/main/ubuntu trusty main >> /etc/apt/sources.list.d/yavdr.list \
  && echo deb-src http://ppa.launchpad.net/yavdr/stable-vdr/ubuntu trusty main >> /etc/apt/sources.list.d/yavdr.list
